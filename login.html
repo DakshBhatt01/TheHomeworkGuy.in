@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - TheHomeworkGuy</title>
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
   <style>
-    body {
-      font-family: 'Lexend', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #f9c5d1, #fddde6);
+    .google-login-button {
+      padding: 12px 20px;
+      background-color: #4285F4;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
     }
-    h2 {
-      color: #4a148c;
-    }
-    #g_id_onload,
-    .g_id_signin {
-      margin-top: 20px;
+    .google-login-button:hover {
+      background-color: #357ae8;
     }
   </style>
 </head>
 <body>
 
-  <h2>Sign in with Google to Continue.</h2>
-
-  <div id="g_id_onload"
-       data-client_id="225196636743-kc7pn09sphgsgcmvu20ismpjlejku8aj.apps.googleusercontent.com"
-       data-login_uri="https://thehomeworkguy.in/home.html"
-       data-auto_prompt="false">
-  </div>
-
-  <div class="g_id_signin" 
-       data-type="standard"
-       data-shape="rectangular"
-       data-theme="outline"
-       data-text="sign_in_with"
-       data-size="large"
-       data-logo_alignment="left">
-  </div>
+  <h2>Login to Continue</h2>
+  
+  <a class="google-login-button"
+     href="https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile&access_type=online&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=https://thehomeworkguy.in/login.html&client_id=225196636743-kc7pn09sphgsgcmvu20ismpjlejku8aj.apps.googleusercontent.com">
+    Sign in with Google
+  </a>
 
 </body>
 </html>
